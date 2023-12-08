@@ -1,0 +1,39 @@
+{
+  "name": "ethentic-contracts",
+  "license": "AGPL-3.0-or-later",
+  "version": "0.0.10",
+  "scripts": {
+    "devchain": "ganache-cli --seed='bruhmoment' --gasLimit=29800000 --networkId=1338 --chainId=1338 --port=8547 --defaultBalanceEther=1000",
+    "compile": "npx hardhat compile",
+    "deploy:dev": "npx hardhat run --network development scripts/deploy.js",
+    "deploy:rinkeby": "npx hardhat run --network rinkeby scripts/deploy.js",
+    "deploy:mainnet": "npx hardhat run --network mainnet scripts/deploy.js",
+    "deploy": "npm run deploy:dev",
+    "poke:rinkeby": "npx hardhat run --network rinkeby scripts/poke.js",
+    "poke:mainnet": "npx hardhat run --network mainnet scripts/poke.js",
+    "test": "npx hardhat test",
+    "install:algo": "cp ../algo/mini_inline.scad ./algos/causeways.scad"
+  },
+  "files": [
+    "index.js",
+    "distribute.json"
+  ],
+  "dependencies": {
+    "@chainlink/contracts": "^0.2.2",
+    "@openzeppelin/contracts": "^4.1.0",
+    "base64-sol": "https://github.com/Brechtpd/base64"
+  },
+  "devDependencies": {
+    "chai-as-promised": "^7.1.1",
+    "dotenv": "^10.0.0",
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.3.0",
+    "ethers": "^5.0.0",
+    "ganache-cli": "^6.12.2",
+    "hardhat": "^2.3.0",
+    "prettier": "^2.5.1",
+    "stl": "^1.1.1"
+  }
+}

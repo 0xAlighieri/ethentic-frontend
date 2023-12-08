@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+
+.pagination {
+  justify-content: center;
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul.pagination li {
+  display: inline-block;
+  width: 54px;
+  border: 1px solid #e2e2e2;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  padding: 12px;
+}
+
+ul.pagination li a {
+  text-decoration: none;
+  color: #45d3c6;
+  font-size: 16px;
+  padding: 8px;
+}
+
+ul.pagination li.active a {
+  color: white;
+}
+ul.pagination li.active {
+  background-color: #45d3c6;
+}
+
+ul.pagination li a:hover,
+ul.pagination li a.active {
+  color: #98e7df;
+}
+
+.page-selection {
+  width: 48px;
+  height: 30px;
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.header {
+  height: auto;
+}
+
+.header nav {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.video-cta {
+  height: auto;
+}
+
+@media (max-width: 330px) {
+  .header {
+    height: 150px;
+  }
+
+  .video-cta {
+    height: 582px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    height: 500px;
+  }
+
+  .video-cta {
+    height: 582px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    height: 900px;
+  }
+
+  .video-cta {
+    height: 582px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .header {
+    height: 1200px;
+  }
+
+  .video-cta {
+    height: 582px;
+  }
+}
+
+@media (min-width: 2880px) {
+  .header {
+    height: 1400px;
+  }
+
+  .video-cta {
+    height: 582px;
+  }
+}
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('../public/fonts/JetBrainsMono-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('../public/fonts/JetBrainsMono-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('../public/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('../public/fonts/JetBrainsMono-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('../public/fonts/JetBrainsMono-Medium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('../public/fonts/JetBrainsMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('../public/fonts/JetBrainsMono-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: "JetBrainsMono";
+  src: url("JetBrainsMono-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic; */
+/* } */
+
+/* 
+thin: '100',
+			extralight: '200',
+			light: '300',
+			normal: '400',
+			medium: '500',
+			semibold: '600',
+			bold: '700',
+			extrabold: '800',
+			black: '900' */
+
+.btn-primary:hover {
+  @apply bg-black;
+}
+
+.custom-h-1 {
+  height: 100%;
+}
+
+.transparency-7 {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.example-selector {
+  background-image: url('../public/images/standard_width_home.png');
+  background-size: 1920px 1080px;
+}
+
+@media (min-width: 1024px) {
+  .width-class-orthographic {
+    width: 800px;
+  }
+
+  .example-selector {
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  .custom-h-1 {
+    height: 800px;
+  }
+}
+
+.bg-color-match-othrographic {
+  background-color: #fbfbfb;
+}
+
+@media (min-width: 2350px) {
+  .custom-h-1 {
+    height: 1200px;
+  }
+}
+
+@media (min-width: 2880px) {
+  .example-selector {
+    background-image: url('../public/images/ultrawide_home.png');
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+  }
+}
+@tailwind utilities;
